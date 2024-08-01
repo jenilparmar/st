@@ -91,12 +91,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-10 bg-[#1a2b37] border-b-2 border-gray-900 shadow-black shadow-lg">
-        <p className="text-white text-center">Path Traced: {formattedPathData}</p>
-      </div>
+
       <div className="w-full h-screen flex justify-center bg-[#1a2b37]">
         <div className="flex flex-row justify-center gap-4">
-          <div className="w-fit bg-[#0f212e] h-fit p-2 gap-2 flex flex-col">
+          <div className="w-fit bg-[#0f212e] h-fit self-center px-2 p-2 gap-2 flex flex-col">
             {Array.from({ length: 5 }, (_, rowIndex) => (
               <section key={rowIndex} className="flex flex-row gap-2 justify-center">
                 {Array.from({ length: 5 }, (_, colIndex) => {
@@ -105,7 +103,7 @@ export default function Home() {
                     <div
                       key={index}
                       onClick={() => getData(index)}
-                      className={`w-20 active:scale-95 flex justify-center active:bg-[#3a4a57] rounded-md hover:bg-[#557086] transition-colors duration-100 hover:scale-110 border-b-8 border-[#243949] h-20 bg-[#2f4553] ${clickedBoxes.has(index) ? "bg-[#3a4a57]" : ""}`}
+                      className={`w-16 active:scale-95 flex justify-center active:bg-[#3a4a57] rounded-md hover:bg-[#557086] transition-colors duration-100 hover:scale-110 border-b-8 border-[#243949] h-16 bg-[#2f4553] ${clickedBoxes.has(index) ? "bg-[#3a4a57]" : ""}`}
                     >
                       {clickedBoxes.has(index) && index === randomWholeNumber.current ? (
                         <GiRollingBomb className="text-red-600 text-5xl self-center shadow-inner shadow-red-500 rounded-full" />
